@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ubiquitos</groupId>
+  <artifactId>epos.temperature.driver</artifactId>
+  <version>0.1</version>
+  <name>Temperature Driver for EPOS-Mote-II</name>
+  <description>uOS Driver integrating with EPOS-Mote-II</description>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>ubiquitos</groupId>
+		<artifactId>uos.api</artifactId>
+		<version>2.2.0_DEV</version>
+  	</dependency>
+  	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.16</version>
+	</dependency>
+
+	<!-- SO dependent -->
+	<dependency>
+		<groupId>org.rxtx</groupId>
+		<artifactId>rxtxcomm.so.linux686</artifactId>
+		<version>2.1.7</version>
+		<type>so</type>
+		<systemPath>${project.basedir}/rxtx/Linux/i686-unknown-linux-gnu/librxtxSerial.so</systemPath>
+		<scope>system</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.rxtx</groupId>
+		<artifactId>rxtxcomm</artifactId>
+		<version>2.1.7</version>
+		<type>jar</type>
+		<systemPath>${project.basedir}/rxtx/RXTXcomm.jar</systemPath>
+		<scope>system</scope>
+	</dependency>
+  	
+  	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.9</version>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-core</artifactId>
+	    <version>1.8.5</version>
+	    <scope>test</scope>
+	</dependency>
+  </dependencies>
+  
+</project>
